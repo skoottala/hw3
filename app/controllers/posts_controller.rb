@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    def show
+      def show
         @post = Post.find(params["id"])
       end
     
@@ -12,9 +12,7 @@ class PostsController < ApplicationController
       def create
         @post = Post.new(params["post"])
         @post.save
-        redirect_to "/placess/#{@post.place.id}"
-      end
-    
+        redirect_to "/places/#{@post.place.id}"
+      end   
       
-
 end
